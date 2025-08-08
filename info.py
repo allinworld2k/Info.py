@@ -1,14 +1,14 @@
 import re
+import os
 from pyrogram import Client, filters
 from pyrogram.types import Message
 import phonenumbers
 from phonenumbers import geocoder, timezone
-import pycountry
 
-# 🔐 Replace these with your Telegram API credentials
-API_ID = 23076905
-API_HASH = "b7720ee893ff1fdc3ea15132e63d5e0b"
-BOT_TOKEN = "8313906278:AAFsA6Vak4cCiyoOHMPMclLnczkU-dXQng4"
+# 🔐 Railway Environment থেকে API_KEY, HASH, TOKEN নেওয়া
+API_ID = int(os.getenv("API_ID"))
+API_HASH = os.getenv("API_HASH")
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 # Known languages map
 known_languages = {
